@@ -1,0 +1,35 @@
+header{
+    /*height: 30px;*/
+}
+.kt-bg{
+    background-color: #272727;
+}
+.kt-isl{
+    padding: 20px;
+    background-color: #353535;
+    border-radius: 10px;
+}
+.btn_row{
+    margin: 20px 0px;
+}
+/*button{
+    background-color: #333333;
+    color: #f0f0f0;
+}*/
+#submit{
+    font-size: 20px;
+}
+/*********************************************/
+body{
+    height: 100%;
+    background-color: #111111;
+}
+.ketv{
+    position:absolute;
+}
+#ketv0{
+    width:0px;
+    height:0px;
+    background-color: #331133;
+    text-align: center;
+}
