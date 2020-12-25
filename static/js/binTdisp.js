@@ -1,9 +1,15 @@
 console.log("dispiii");
 
 $(function(){
-    ketFont($("#ketv0"), 4);
+    ketFont($("#ketv0"), 1);
     create_digits(8);
+    var tm = setInterval(function(){
+        sie++;
+        refresh_digits(8);
+    }, 250);
 });
+
+///////////////////////////////
 $(disp_recet);
 $(window).resize(disp_recet);
 function disp_recet(){
@@ -14,12 +20,9 @@ function disp_recet(){
     console.log("ratio: "+ inWH.ratio);
     arrange_all();
 }
-
 function arrange_all(){
     arrange_ketv0();
 }
-
-
 
 function arrange_ketv0(){
     if(inWH.ratio > 16/8){
@@ -37,27 +40,55 @@ function arrange_ketv0(){
 
     }
 }
-//
+
+//KETV0/////////////////////
+//id: d7 d6 d5 d4 d3 d2 d1 d0
+var sie = 12344;
 function create_digits(n){
-    for(var i = 0; i < n+1; i++){
-        if(i != 4){
-            $('<span>', {
-                class: 'digit',
-                text: randbin()
-            }).appendTo('#ketv0');
-        }else{
+    var str = toBinary(sie);
+    console.log("bin: "+ str);
+    var BinArr = toArray(str, true);
+    console.log(BinArr);
+    for(var i = 0; i < n; i++){
+        var index = ((n-1) - i);
+        if(i == 4){
             $('<span>', {
                 class: 'space',
                 text: ' '
             }).appendTo('#ketv0');
         }
+        $('<span>', {
+            id: 'd'+ index,
+            class: 'digit',
+            text: BinArr[index]
+        }).appendTo('#ketv0');
     }
 }
-function randbin(){
-    if(Math.random() >= 0.5){
-        return 1;
+function refresh_digits(){
+    var BinArr = toArray(
+        toBinary(sie)
+    , true);
+    var target = $(".digit");
+    console.log(typeof target);
+    var len = target.length;
+    target.map(function(ind, elem){
+        //console.log(elem);
+        elem.innerText 
+            = BinArr[(len-1)-ind];
+    });
+}
+toBinary = (n) => parseInt(n.toString(2));
+//small first, large last
+function toArray(arg, rvs){
+    str = String(arg);
+    var strarr = str.split("");
+    //console.log(strarr);
+    /*strarr.map(function(val){
+        console.log(val);
+    });*/
+    if(rvs){
+        return strarr.reverse();
     }else{
-        return 0;
+        return strarr;
     }
-}
-
+}    

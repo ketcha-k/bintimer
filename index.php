@@ -38,9 +38,11 @@
     <header class=""></header>
     <div class="content container">
         
-        <div class="ketv" id="ketv0" >  </div>
+        <div class="ketv demo-0026-tx-1" id="ketv0" >  </div>
 
-        <div class="text-muted">myu-teki</div>
+        <div class="text-muted" style="text-align: center">
+            tap!
+        </div>
     </div>
  
     
