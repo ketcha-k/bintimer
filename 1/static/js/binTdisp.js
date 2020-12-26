@@ -1,10 +1,9 @@
 console.log("dispiii");
-//alert("10");
+//alert("sto");
 
 $(function(){
     ketFont($("#ketv0"), 1);
     create_digits(8);
-    startTimer();
 });
 
 ///////////////////////////////
