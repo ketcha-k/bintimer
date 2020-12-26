@@ -1,4 +1,5 @@
 console.log("dispiii");
+//alert("10");
 
 $(function(){
     ketFont($("#ketv0"), 1);
@@ -10,21 +11,19 @@ $(function(){
 $(disp_recet);
 $(window).resize(disp_recet);
 function disp_recet(){
-    console.log("");
-    /*var w_p = clinWH();
-    arrange_all(w_p);*/
-    clinWH();
-    console.log("ratio: "+ inWH.ratio);
-    arrange_all();
+    setTimeout(function(){
+        clinWH();
+        arrange_all()
+    }, 10);
 }
 function arrange_all(){
     arrange_ketv0();
 }
 
 function arrange_ketv0(){
-    if(inWH.ratio > 16/8){
+    //if(inWH.ratio > 16/8){
 
-    }else if(inWH.ratio > 8/16){
+    //}else if(inWH.ratio > 8/16){
         var elem = $("#ketv0");
         elem.width(inWH.width * 0.8);
         elem.height(elem.width() * 1/5);
@@ -33,14 +32,13 @@ function arrange_ketv0(){
         elem.css("font-size", h);
         elem.css("line-height", h);
         arng_xyV(elem, [50,50]);
-    }else{
+    //}else{
 
-    }
+    //}
 }
 
 //KETV0/////////////////////
 //id: d7 d6 d5 d4 d3 d2 d1 d0
-var sie = 12344;
 function create_digits(n){
     var str = toBinary(sie);
     console.log("bin: "+ str);
@@ -74,18 +72,17 @@ function refresh_digits(){
             = BinArr[(len-1)-ind];
     });
 }
-toBinary = (n) => parseInt(n.toString(2));
+//toBinary = (n) => parseInt(n.toString(2));
+function toBinary(n){
+    var str = n.toString(2);
+    str = ('00000000'+ str ).slice(-8);
+    //console.log(str);
+    return str;
+}
 //small first, large last
-function toArray(arg, rvs){
-    str = String(arg);
+function toArray(str, rvs){
     var strarr = str.split("");
-    //console.log(strarr);
-    /*strarr.map(function(val){
-        console.log(val);
-    });*/
     if(rvs){
         return strarr.reverse();
-    }else{
-        return strarr;
     }
 }    

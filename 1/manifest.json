@@ -1,11 +1,11 @@
 {
-  "name": "のびる君",
-  "short_name": "のびる君",
-  "theme_color": "#ffab00",
+  "name": "10進数は甘え",
+  "short_name": "10甘",
+  "theme_color": "#151515",
   "background_color": "#252525",
   "display": "standalone",
   "start_url": "./index.php",
-  "orientation": "portrait",
+  "orientation": "landscape",
   "icons": [{
         "src": "icons/icon192.png",
         "sizes": "192x192",

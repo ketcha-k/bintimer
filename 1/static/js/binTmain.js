@@ -1,4 +1,6 @@
 console.log("mainaaa");
+var sie = 0;
+var speed = 1000 / 2;
 
 $(function(){
     $("#ketv0").on('click', function(){
@@ -33,8 +35,9 @@ function startTimer(){
     console.log("start");
     timer0 = setInterval(function(){
         sie++;
+        console.log(sie);
         refresh_digits(8);
-    }, 1000/8);
+    }, speed);
     ststFlag = !ststFlag;
 }
 function stopTimer(){
