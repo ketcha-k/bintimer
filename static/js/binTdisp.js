@@ -3,10 +3,7 @@ console.log("dispiii");
 $(function(){
     ketFont($("#ketv0"), 1);
     create_digits(8);
-    var tm = setInterval(function(){
-        sie++;
-        refresh_digits(8);
-    }, 250);
+    startTimer();
 });
 
 ///////////////////////////////
@@ -69,7 +66,7 @@ function refresh_digits(){
         toBinary(sie)
     , true);
     var target = $(".digit");
-    console.log(typeof target);
+    //console.log(typeof target);
     var len = target.length;
     target.map(function(ind, elem){
         //console.log(elem);

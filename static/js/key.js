@@ -31,12 +31,9 @@ function KeyDownFunc(e){
         //btt1ac();
     }
 
+    
     if(key_code == 32){//SPACE 
-        if(state == "move"){
-            btt2ac();
-        }else{
-            resumeac();
-        }
+        ststTimer();
     }
 }
 

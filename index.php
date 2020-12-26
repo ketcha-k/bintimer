@@ -1,7 +1,6 @@
 <!doctype html>
-<title>binT</title>
 <head>
-    <title></title>
+    <title>BinT</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +33,7 @@
     </script>
 </head>
  
-<body class="text-white kt-bg">
+<body class="text-white kt-bg" id="bodybody">
     <header class=""></header>
     <div class="content container">
         
