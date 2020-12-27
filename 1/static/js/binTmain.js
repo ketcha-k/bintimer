@@ -1,8 +1,9 @@
 console.log("mainaaa");
+//alert("iconicon");
 var sie = 0;
 var speed = 1000 / 2;
 
-//register Events
+    //register Events
 $(function(){
     $("#ketv0").on('click', function(){
         console.log("ii");

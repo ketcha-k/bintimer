@@ -7,11 +7,11 @@
   "start_url": "./index.php",
   "orientation": "landscape",
   "icons": [{
-        "src": "icons/icon192.png",
+        "src": "icons/1001/icon192.png",
         "sizes": "192x192",
         "tipe": "image/png"
     }, {
-        "src": "icons/icon512.png",
+        "src": "icons/1001/icon512.png",
         "sizes": "512x512",
         "tipe": "image/png"
     }
