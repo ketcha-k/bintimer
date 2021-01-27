@@ -16,24 +16,25 @@ function disp_recet(){
     }, 10);
 }
 function arrange_all(){
-    arrange_ketv0();
+    var w2h = inWH.width / inWH.height;
+    if(w2h )
+    arrange_ketv("#ketv0", 
+        ['w', 0.8, 1/5], 1, [[50, 50], ["center", "middle"]]);
+    arrange_ketv("#ketv1", 
+        ['w', 0.15, 1], 0.5, [[30, 30], ["center", "middle"]])
 }
 
-function arrange_ketv0(){
-    //if(inWH.ratio > 16/8){
-
-    //}else if(inWH.ratio > 8/16){
-        var elem = $("#ketv0");
-        elem.width(inWH.width * 0.8);
-        elem.height(elem.width() * 1/5);
-        var h = elem.height()*1 + "px";
-        console.log("h: "+ h);
-        elem.css("font-size", h);
-        elem.css("line-height", h);
-        arng_xyV(elem, [50,50]);
-    //}else{
-
-    //}
+function arrange_ketv(id, size, f2h, position){
+    var elem = $(id);
+    if(size[0] == 'w'){
+        elem.width(inWH.width * size[1]);
+        elem.height(elem.width() * size[2]);
+    }
+    var h = elem.height()* f2h + "px";
+    console.log("h: "+ h);
+    elem.css("font-size", h);
+    elem.css("line-height", elem.height() + "px");
+    arng_xyV(elem, position[0], position[1]); //lcr tmb
 }
 
 //KETV0/////////////////////

@@ -41,6 +41,9 @@
     <div class="content container">
         
         <div class="ketv demo-0026-tx-1" id="ketv0" >  </div>
+        <div class="ketv " id="ketv1" >mi</div>
+        <div class="ketv " id="ketv2" >mi</div>
+        <div class="ketv " id="ketv3" >mi </div>
 
         <div class="text-muted" style="text-align: center">
             tap!
