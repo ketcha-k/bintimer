@@ -17,11 +17,16 @@ function disp_recet(){
 }
 function arrange_all(){
     var w2h = inWH.width / inWH.height;
-    if(w2h )
+    console.log("w2h: " + w2h);
+    //if(w2h )
     arrange_ketv("#ketv0", 
         ['w', 0.8, 1/5], 1, [[50, 50], ["center", "middle"]]);
     arrange_ketv("#ketv1", 
-        ['w', 0.15, 1], 0.5, [[30, 30], ["center", "middle"]])
+        ['w', 0.15, 0.77], 0.5, [[30, 30], ["center", "middle"]]);
+    arrange_ketv("#ketv2", 
+        ['w', 0.15, 0.77], 0.5, [[30, 50], ["center", "middle"]]);
+    arrange_ketv("#ketv3", 
+        ['w', 0.15, 0.77], 0.5, [[30, 70], ["center", "middle"]]);
 }
 
 function arrange_ketv(id, size, f2h, position){
