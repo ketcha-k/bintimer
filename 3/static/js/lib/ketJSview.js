@@ -38,15 +38,16 @@ function arng_xy(obj, xy){
 }
 //based on the center, with percentage
 function arng_xyV(obj, p_xy, lcr_tmb_pair){
+    //console.log("perc:" + p_xy);
     var xy = {
         left: (p_xy[0]/100) * inWH.width,
         top: (p_xy[1]/100) * inWH.height
     }
-    var xyV;
-    xyV = {
+    var xyV = {
         left: xy.left - ( obj.width()  * slctEdge(lcr_tmb_pair[0]) ),
         top: xy.top   - ( obj.height() * slctEdge(lcr_tmb_pair[1]) )
     };
+    console.log("xyV: " + xyV.left + "__" + xyV.top);
     arng_xy(obj, xyV);
 }
 //which edge of DOM element to be moved
@@ -56,7 +57,6 @@ function slctEdge(lcr_tmb){
         "top": 0, "middle": 0.5, "bottom": 1
     };
     return dict[lcr_tmb];
-
 }
 //change font fam of a DOM elem
 function ketFont(obj, a){

@@ -8,25 +8,15 @@ body{
 }
 .ketv{
     position:absolute;
-}
-#ketv0{
-    width:0px;
-    height:0px;
-    background-color: #2ce69867;
     text-align: center;
 }
-#ketv1{
-    background-color: #e233e291;
-    text-align: center;
-}
-#ketv2{
-    background-color: #b9a21e9d;
-    text-align: center;
-}
-#ketv3{
-    background-color: #3378d394;
-    text-align: center;
-}
+#ketv0{    background-color: #2ce69867;}
+#ketv1{    background-color: #e233e291;}
+#ketv2{    background-color: #b9a21e9d;}
+#ketv3{    background-color: #3378d394;}
+#ketv4{    background-color: #80d33394;}
+#ketv5{    background-color: #2fcdd894;}
+#ketv6{    background-color: #d333b894;}
 
 .demo-0026-tx-1 {
     text-shadow: 0 0 6px #fff,0 0 6px #fff;

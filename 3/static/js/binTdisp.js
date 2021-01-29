@@ -20,13 +20,19 @@ function arrange_all(){
     console.log("w2h: " + w2h);
     //if(w2h )
     arrange_ketv("#ketv0", 
-        ['w', 0.8, 1/5], 1, [[50, 50], ["center", "middle"]]);
+        ['w', 0.8, 1/5], 1, [[50, 30], ["center", "bottom"]]);
     arrange_ketv("#ketv1", 
-        ['w', 0.15, 0.77], 0.5, [[30, 30], ["center", "middle"]]);
+        ['w', 0.4, 1/5], 1, [[10, 30], ["left", "top"]]);
     arrange_ketv("#ketv2", 
-        ['w', 0.15, 0.77], 0.5, [[30, 50], ["center", "middle"]]);
+        ['w', 0.1, 4/5], 1, [[90, 30], ["right", "top"]]);
     arrange_ketv("#ketv3", 
-        ['w', 0.15, 0.77], 0.5, [[30, 70], ["center", "middle"]]);
+        ['w', 0.4, 1], 0.5, [[10, 42], ["left", "top"]]);
+    arrange_ketv("#ketv4", 
+        ["wh", 0.2, 0.2], 0.5, [[50, 42], ["left", "top"]]);
+    arrange_ketv("#ketv5", 
+        ['w', 0.2, 1], 0.5, [[70, 62], ["left", "top"]]);
+    arrange_ketv("#ketv6", 
+        ['w', 0.4, 1/2], 0.5, [[50, 62], ["left", "top"]]);
 }
 
 function arrange_ketv(id, size, f2h, position){
@@ -34,12 +40,17 @@ function arrange_ketv(id, size, f2h, position){
     if(size[0] == 'w'){
         elem.width(inWH.width * size[1]);
         elem.height(elem.width() * size[2]);
+    }else if(size[0] == "wh"){
+        elem.width(inWH.width * size[1]);
+        elem.height(inWH.height * size[2]);
     }
     var h = elem.height()* f2h + "px";
     console.log("h: "+ h);
     elem.css("font-size", h);
     elem.css("line-height", elem.height() + "px");
     arng_xyV(elem, position[0], position[1]); //lcr tmb
+
+    return 0;
 }
 
 //KETV0/////////////////////

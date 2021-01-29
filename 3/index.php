@@ -44,7 +44,9 @@
         <div class="ketv " id="ketv1" >01010101</div>
         <div class="ketv " id="ketv2" >mi</div>
         <div class="ketv " id="ketv3" >mi </div>
-        <div class="ketv " id="ketv4" >mi </div>
+        <div class="ketv " id="ketv4" >STOP </div>
+        <div class="ketv " id="ketv5" >MENU</div>
+        <div class="ketv " id="ketv6" >RAP</div>
 
         <!--
         <div class="text-muted" style="text-align: center">
